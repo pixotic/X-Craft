@@ -10,16 +10,15 @@ import net.minecraft.world.World;
 
 import org.pixotic.xcraft.core.proxy.ClientProxy;
 import org.pixotic.xcraft.lib.Reference;
-import org.pixotic.xcraft.tileentity.TileTest3DBlock;
-
+import org.pixotic.xcraft.tileentity.TileEntityAlienPowerSource;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockTest3DBlock extends BlockContainer {
-    public BlockTest3DBlock(int id, Material par2Material) {
+public class BlockAlienPowerSource extends BlockContainer {
+    public BlockAlienPowerSource(int id, Material par2Material) {
         super(id, par2Material);
         this.setCreativeTab(CreativeTabs.tabBlock);
-        this.setUnlocalizedName("test3DBlock");
+        this.setUnlocalizedName("xcraftAlienPowerSource");
     }
     
     @SideOnly(Side.CLIENT)
@@ -54,7 +53,7 @@ public class BlockTest3DBlock extends BlockContainer {
     }
     
     public TileEntity createNewTileEntity(World world) {
-        return new TileTest3DBlock();
+        return new TileEntityAlienPowerSource();
     }
     
     public int getRenderType() {

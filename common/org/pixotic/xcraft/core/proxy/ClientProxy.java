@@ -6,7 +6,6 @@ import org.pixotic.xcraft.client.TileEntityTest3DBlockRenderer;
 import org.pixotic.xcraft.client.renderer.item.ItemTest3DBlockRenderer;
 import org.pixotic.xcraft.tileentity.TileTest3DBlock;
 
-import net.minecraftforge.client.MinecraftForgeClient;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 

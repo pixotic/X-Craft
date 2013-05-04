@@ -7,7 +7,7 @@ import org.pixotic.xcraft.block.BlockAlienAlloy;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.ItemStack;
+
 
 //import com.pahimar.ee3.lib.BlockIds;
 //import com.pahimar.ee3.lib.Strings;
@@ -20,21 +20,24 @@ public class ModBlocks {
 
     /* Mod block instances */
     //public status Block blockname;
+    //public static Block test3DBlock;
     public static Block alienAlloy;
-    public static Block test3DBlock;
+    public static Block alienPowerSource;
 
     public static void init() {
 
         //blockName = new BlockNameClass(BlockIds.BLOCKNAME);
+        //test3DBlock = new BlockTest3DBlock(2223, Material.rock);
         alienAlloy = new BlockAlienAlloy(2222, Material.iron);
-        test3DBlock = new BlockTest3DBlock(2223, Material.rock);
+        alienPowerSource = new BlockAlienPowerSource(2223, Material.rock);
 
         //GameRegistry.registerBlock(blockName, Strings.BLOCKNAME_NAME);
+        //GameRegistry.registerBlock(test3DBlock, "test3DBlock");
+        //LanguageRegistry.addName(test3DBlock, "3d Test Block");
         GameRegistry.registerBlock(alienAlloy, "alienAlloy");
         LanguageRegistry.addName(alienAlloy, "Alien Alloy");
-        
-        GameRegistry.registerBlock(test3DBlock, "test3DBlock");
-        LanguageRegistry.addName(test3DBlock, "3d Test Block");
+        GameRegistry.registerBlock(alienPowerSource, "alienPowerSource");
+        LanguageRegistry.addName(alienPowerSource, "Alien Power Source");
         
         initBlockRecipes();
 

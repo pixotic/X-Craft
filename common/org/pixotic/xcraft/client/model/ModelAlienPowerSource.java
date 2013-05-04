@@ -1,26 +1,25 @@
 package org.pixotic.xcraft.client.model;
 
 import org.lwjgl.opengl.GL11;
-import org.pixotic.xcraft.tileentity.TileTest3DBlock;
-
+import org.pixotic.xcraft.tileentity.TileEntityAlienPowerSource;
 import cpw.mods.fml.client.FMLClientHandler;
 
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 
-public class ModelTest3DBlock {
+public class ModelAlienPowerSource {
     
-    private IModelCustom modelTest3DBlock;
+    private IModelCustom modelAlienPowerSource;
     
-    public ModelTest3DBlock() {
-        modelTest3DBlock = AdvancedModelLoader.loadModel("/mods/xcraft/models/TutBox.obj");
+    public ModelAlienPowerSource() {
+        modelAlienPowerSource = AdvancedModelLoader.loadModel("/mods/xcraft/models/AlienPowerSource.obj");
     }
     
     public void render() {
-        modelTest3DBlock.renderAll();
+        modelAlienPowerSource.renderAll();
     }
     
-    public void render(TileTest3DBlock block, double x, double y, double z) {
+    public void render(TileEntityAlienPowerSource block, double x, double y, double z) {
         
         //Push blank matrix onto stack
         GL11.glPushMatrix();
@@ -32,7 +31,7 @@ public class ModelTest3DBlock {
         GL11.glScalef(0.5f,  0.5f, 0.5f);
         
         //Bind texture so ogl properly uses it
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture("/mods/xcraft/textures/models/TutBox.png");
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture("/mods/xcraft/textures/models/AlienPowerSource.png");
         
         //Render!
         this.render();

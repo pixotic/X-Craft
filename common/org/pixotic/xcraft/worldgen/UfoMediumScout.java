@@ -5,39 +5,15 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemDoor;
 import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.WorldGenerator;
 
-import org.pixotic.xcraft.block.ModBlocks;
+public class UfoMediumScout extends UfoStructure {
 
-public class ufoSmallScout extends WorldGenerator {
-
-    private int xLen = 9;
-    private int yLen = 5;
-    private int zLen = 9;
-    
-    private int doorBlock = Block.doorWood.blockID;
-    private int wallBlock = ModBlocks.alienAlloy.blockID;
-    private int windowBlock = Block.glass.blockID;
-    private int powersourceBlock = Block.glowStone.blockID;
-    //alienSeating
-    //NavigationConsole
-    //otherStuff
-    
-    public ufoSmallScout() {
-
+    public UfoMediumScout() {
+        this.xLen = 9;
+        this.yLen = 5;
+        this.zLen = 9;
     }
-    
-    public boolean validLocation(World world, Random rand, int x, int y, int z) {
-        boolean returnVal = true;
-        for (int ix = x; ix < x + this.xLen; ix++) {
-            for (int iz = z; iz < z + this.zLen; iz++) {
-                if (!world.canBlockSeeTheSky(ix, y, iz)) returnVal = false;
-            }
-        }
-        System.out.println("Valid ufo location: " + returnVal);
-        return returnVal;
-    }
-    
+       
     public boolean generate(World world, Random rand, int x, int y, int z) {
         System.out.println("UFO landing at " + x + "," + y + "," + z);
         int endX = x + this.xLen;

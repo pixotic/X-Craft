@@ -27,10 +27,15 @@ public class UfoHandler implements IWorldGenerator {
                 if(
                   world.getBlockId(RandPosX, height -1 , RandPosZ)== Block.sand.blockID 
                   || world.getBlockId(RandPosX, height -1, RandPosZ)== Block.dirt.blockID
+                  || world.getBlockId(RandPosX, height -1, RandPosZ) == Block.grass.blockID
                 ) {
-                    if ((new ufoSmallScout()).validLocation(world, rand, RandPosX, height, RandPosZ)) {
-                        (new ufoSmallScout()).generate(world, rand, RandPosX, height, RandPosZ);
+                    //if ((new UfoLargeScout()).validLocation(world, rand, RandPosX, height, RandPosZ)) {
+                    //    (new UfoLargeScout()).generate(world, rand, RandPosX, height, RandPosZ);
+                    //}
+                    if ((new UfoMediumScout()).validLocation(world, rand, RandPosX, height, RandPosZ)) {
+                        (new UfoMediumScout()).generate(world, rand, RandPosX, height, RandPosZ);
                     }
+                                        
                     break;
                 }
             }
