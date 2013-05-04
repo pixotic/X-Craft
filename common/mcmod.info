@@ -1,0 +1,20 @@
+[
+{
+  "modid": "xcraft",
+  "name": "X-Craft",
+  "description": "Introduces elements from the classic strategy game X-Com: UFO Enemy Unknown to Minecraft. Blast some bugs!",
+  "version": "0.0.1a",
+  "url": "http://www.pixotic.org",
+  "updateUrl": "",
+  "authorList": [
+    "Pixotic"
+  ],
+  "credits": "Inspired by the X-Com games from ths 90's",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
