@@ -4,7 +4,6 @@ import org.pixotic.xcraft.block.ModBlocks;
 import org.pixotic.xcraft.core.proxy.CommonProxy;
 import org.pixotic.xcraft.lib.Reference;
 import org.pixotic.xcraft.tileentity.TileEntityAlienPowerSource;
-import org.pixotic.xcraft.tileentity.TileTest3DBlock;
 import org.pixotic.xcraft.worldgen.UfoHandler;
 
 import cpw.mods.fml.common.Mod;
@@ -36,7 +35,7 @@ public class XCraft {
     
     @Init
     public void init(FMLInitializationEvent event) {
-        GameRegistry.registerTileEntity(TileEntityAlienPowerSource.class, "tileTest3DBlock");
+        GameRegistry.registerTileEntity(TileEntityAlienPowerSource.class, "tileAlienPowerSource");
         GameRegistry.registerWorldGenerator(new UfoHandler());
         Proxy.InitRendering();
     }
