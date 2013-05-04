@@ -37,7 +37,8 @@ public class BlockAlienPowerSource extends BlockContainer {
         if(playerEntity.isSneaking())
             return false;
         
-        playerEntity.setEntityHealth(0);
+        //There should be something neat that happens, I guess. TODO: Add more neat stuff.
+        //playerEntity.setEntityHealth(0);
         return true;
     }
 
