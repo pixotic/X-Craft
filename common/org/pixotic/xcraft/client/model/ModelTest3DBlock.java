@@ -31,7 +31,6 @@ public class ModelTest3DBlock {
         
         //Scale object 50%
         GL11.glScalef(0.5f,  0.5f, 0.5f);
-        GL11.glColor3f(0, 0, 0);
         
         //Bind texture so ogl properly uses it
         FMLClientHandler.instance().getClient().renderEngine.bindTexture("/mods/xcraft/textures/models/TutBox.png");
