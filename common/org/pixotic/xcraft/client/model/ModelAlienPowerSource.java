@@ -25,10 +25,10 @@ public class ModelAlienPowerSource {
         GL11.glPushMatrix();
         
         //Move object to right position on block (true obj origin is center of object)
-        GL11.glTranslatef((float)x + 0.5f, (float)y + 0.5f, (float)z + 0.5f);
+        GL11.glTranslatef((float)x + 0.5f, (float)y, (float)z + 0.5f);
         
-        //Scale object 50%
-        GL11.glScalef(0.5f,  0.5f, 0.5f);
+        //Scale object down
+        GL11.glScalef(0.2f,  0.2f, 0.2f);
         
         //Bind texture so ogl properly uses it
         FMLClientHandler.instance().getClient().renderEngine.bindTexture("/mods/xcraft/textures/models/AlienPowerSource.png");

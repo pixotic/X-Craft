@@ -1,8 +1,6 @@
 package org.pixotic.xcraft.tileentity;
 
-import net.minecraft.tileentity.TileEntity;
-
-public class TileEntityAlienPowerSource extends TileEntity {
+public class TileEntityAlienPowerSource extends TileXCraft {
     
     public TileEntityAlienPowerSource() {
         

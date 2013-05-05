@@ -29,15 +29,15 @@ public class ItemAlienPowerSourceRenderer implements IItemRenderer {
     public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
         switch(type) {
             case ENTITY: {
-                renderAlienPowerSource(0f, 0f, 0f, 0.5f);
+                renderAlienPowerSource(0f, 0f, 0f, 0.2f);
                 return;
             }
             case EQUIPPED: {
-                renderAlienPowerSource(0f, 1f, 1f, 0.5f);
+                renderAlienPowerSource(0f, 1f, 1f, 0.2f);
                 return;
             }
             case INVENTORY: {
-                renderAlienPowerSource(0f, 0f, 0f, 0.5f);
+                renderAlienPowerSource(0f, 0f, 0f, 0.2f);
                 return;
             }
             default:return;
