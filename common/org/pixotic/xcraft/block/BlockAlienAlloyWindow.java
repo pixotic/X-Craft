@@ -1,5 +1,7 @@
 package org.pixotic.xcraft.block;
 
+import java.util.Random;
+
 import org.pixotic.xcraft.lib.Reference;
 
 import cpw.mods.fml.relauncher.Side;
@@ -10,16 +12,16 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.Icon;
 
-public class BlockAlienAlloy extends Block {
+public class BlockAlienAlloyWindow extends Block {
     //@SideOnly(Side.CLIENT)
     //private Icon iconSides;
     @SideOnly(Side.CLIENT)
     private Icon iconEnds;
     
-    public BlockAlienAlloy(int id, Material par2Material) {
+    public BlockAlienAlloyWindow(int id, Material par2Material) {
         super(id, par2Material);
         this.setCreativeTab(CreativeTabs.tabBlock);
-        this.setUnlocalizedName("alienAlloy");
+        this.setUnlocalizedName("alienAlloyWindow");
         this.setHardness(8.0f);
         this.setResistance(50.0f);
     }
@@ -45,8 +47,12 @@ public class BlockAlienAlloy extends Block {
      */
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.blockIcon = par1IconRegister.registerIcon(Reference.MOD_ID + ":alien-alloy-wall-large");
+        this.blockIcon = par1IconRegister.registerIcon(Reference.MOD_ID + ":alien-alloy-window-large");
         this.iconEnds = par1IconRegister.registerIcon(Reference.MOD_ID + ":alien-alloy-floor");
+    }
+    
+    public int idDropped(int par1, Random random, int zero) {
+        return ModBlocks.alienAlloy.blockID;
     }
     
 }

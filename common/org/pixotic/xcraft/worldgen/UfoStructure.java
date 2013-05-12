@@ -15,9 +15,11 @@ public class UfoStructure extends WorldGenerator {
     public int zLen;
     
     protected int doorBlock = Block.doorWood.blockID;
+    protected int interiorDoor = Block.doorWood.blockID;
     protected int wallBlock = ModBlocks.alienAlloy.blockID;
-    protected int windowBlock = Block.glass.blockID;
-    protected int powersourceBlock = ModBlocks.alienPowerSource.blockID;
+    protected int interiorWall = Block.fenceIron.blockID;
+    protected int windowBlock = ModBlocks.alienAlloyWindow.blockID;
+    protected int powerSource = ModBlocks.alienPowerSource.blockID;
     //alienSeating
     //NavigationConsole
     //otherStuff

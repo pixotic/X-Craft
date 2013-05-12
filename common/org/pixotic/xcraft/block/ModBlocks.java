@@ -22,22 +22,31 @@ public class ModBlocks {
     //public status Block blockname;
     //public static Block test3DBlock;
     public static Block alienAlloy;
+    public static Block alienAlloyWindow;
     public static Block alienPowerSource;
+    public static Block baseSmallRadar;
 
     public static void init() {
 
         //blockName = new BlockNameClass(BlockIds.BLOCKNAME);
         //test3DBlock = new BlockTest3DBlock(2223, Material.rock);
         alienAlloy = new BlockAlienAlloy(2222, Material.iron);
+        alienAlloyWindow = new BlockAlienAlloyWindow(2225, Material.iron);
         alienPowerSource = new BlockAlienPowerSource(2223, Material.rock);
+        baseSmallRadar = new BlockBaseSmallRadar(2224, Material.iron);
 
         //GameRegistry.registerBlock(blockName, Strings.BLOCKNAME_NAME);
         //GameRegistry.registerBlock(test3DBlock, "test3DBlock");
         //LanguageRegistry.addName(test3DBlock, "3d Test Block");
         GameRegistry.registerBlock(alienAlloy, "alienAlloy");
         LanguageRegistry.addName(alienAlloy, "Alien Alloy");
+        GameRegistry.registerBlock(alienAlloyWindow, "alienAlloyWindow");
+        LanguageRegistry.addName(alienAlloyWindow, "UFO Window");
         GameRegistry.registerBlock(alienPowerSource, "alienPowerSource");
         LanguageRegistry.addName(alienPowerSource, "Alien Power Source");
+        GameRegistry.registerBlock(baseSmallRadar, "baseSmallRadar");
+        LanguageRegistry.addName(baseSmallRadar, "Small Radar");
+        
         
         initBlockRecipes();
 

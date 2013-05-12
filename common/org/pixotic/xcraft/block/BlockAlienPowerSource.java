@@ -9,6 +9,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
@@ -23,6 +24,8 @@ public class BlockAlienPowerSource extends BlockContainer {
         super(id, par2Material);
         this.setCreativeTab(CreativeTabs.tabBlock);
         this.setUnlocalizedName("xcraftAlienPowerSource");
+        this.setHardness(3.0f);
+        this.setResistance(0.0f);
     }
     
     @SideOnly(Side.CLIENT)
@@ -55,6 +58,11 @@ public class BlockAlienPowerSource extends BlockContainer {
     @Override
     public boolean renderAsNormalBlock() {
         return false;
+    }
+    
+    @Override
+    public int getLightValue (IBlockAccess world, int x, int y, int z) {
+        return 15;
     }
     
     public TileEntity createNewTileEntity(World world) {

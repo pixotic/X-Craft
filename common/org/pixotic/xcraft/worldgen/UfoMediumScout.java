@@ -15,7 +15,7 @@ public class UfoMediumScout extends UfoStructure {
     }
        
     public boolean generate(World world, Random rand, int x, int y, int z) {
-        System.out.println("UFO landing at " + x + "," + y + "," + z);
+        System.out.println("Medium Scout landing at " + x + "," + y + "," + z);
         int endX = x + this.xLen;
         int endY = y + this.yLen;
         int endZ = z + this.zLen;
@@ -71,7 +71,7 @@ public class UfoMediumScout extends UfoStructure {
         world.setBlock(x, y + 2, z + 3, windowBlock);
         world.setBlock(x, y + 2, z + 5, windowBlock);
         
-        world.setBlock(x + 4, y + 1, z + 4, powersourceBlock);
+        world.setBlock(x + 4, y + 1, z + 4, powerSource);
         
         //Lay-zee aliens
         world.setBlock(endX - 3, y + 1, z + 3, Block.cloth.blockID, 9, 3);
