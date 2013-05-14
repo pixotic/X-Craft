@@ -32,7 +32,7 @@ public class ItemLaserPistol extends Item {
             //--par1ItemStack.stackSize;
         }
 
-        par2World.playSoundAtEntity(par3EntityPlayer, Sounds.LASER_SHOT, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
+        par2World.playSoundAtEntity(par3EntityPlayer, Sounds.LASER_SHOT, 0.5F, 1.0F);
 
         if (!par2World.isRemote)
         {

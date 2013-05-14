@@ -34,6 +34,7 @@ public class XCraft {
     public void preInit(FMLPreInitializationEvent event) {
         ModBlocks.init();
         ModItems.init();
+        Proxy.registerSoundHandler();
     }
     
     @Init
@@ -41,7 +42,6 @@ public class XCraft {
         GameRegistry.registerTileEntity(TileEntityAlienPowerSource.class, "tileAlienPowerSource");
         GameRegistry.registerWorldGenerator(new UfoHandler());
         Proxy.InitRendering();
-        Proxy.registerSoundHandler();
     }
 
     @PostInit

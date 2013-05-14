@@ -10,6 +10,10 @@ public class EntityLaserBeam extends EntityThrowable {
     
     public EntityLaserBeam(World world) {
         super(world);
+        int speed = 5;
+        this.motionX*=speed;
+        this.motionY*=speed;
+        this.motionZ*=speed;
     }
     public EntityLaserBeam(World world, EntityLiving entity) {
         super(world, entity);
@@ -19,8 +23,14 @@ public class EntityLaserBeam extends EntityThrowable {
     }
     
     @Override
+    protected float getGravityVelocity() {
+        return 0;
+    }
+    
+    @Override
     protected void onImpact(MovingObjectPosition pos) {
-        
+        this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, 1.0f, true);
+        this.setDead();
     }
     
 }
