@@ -4,4 +4,7 @@ public class CommonProxy {
     public void InitRendering(){
         
     }
+    public void registerSoundHandler() {
+
+    }
 }

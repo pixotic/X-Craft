@@ -2,10 +2,12 @@ package org.pixotic.xcraft;
 
 import org.pixotic.xcraft.block.ModBlocks;
 import org.pixotic.xcraft.core.proxy.CommonProxy;
+import org.pixotic.xcraft.item.ModItems;
 import org.pixotic.xcraft.lib.Reference;
 import org.pixotic.xcraft.tileentity.TileEntityAlienPowerSource;
 import org.pixotic.xcraft.worldgen.UfoHandler;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -31,6 +33,7 @@ public class XCraft {
     @PreInit
     public void preInit(FMLPreInitializationEvent event) {
         ModBlocks.init();
+        ModItems.init();
     }
     
     @Init
@@ -38,6 +41,7 @@ public class XCraft {
         GameRegistry.registerTileEntity(TileEntityAlienPowerSource.class, "tileAlienPowerSource");
         GameRegistry.registerWorldGenerator(new UfoHandler());
         Proxy.InitRendering();
+        Proxy.registerSoundHandler();
     }
 
     @PostInit

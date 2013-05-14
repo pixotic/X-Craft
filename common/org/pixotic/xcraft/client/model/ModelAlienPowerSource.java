@@ -2,10 +2,16 @@ package org.pixotic.xcraft.client.model;
 
 import org.lwjgl.opengl.GL11;
 import org.pixotic.xcraft.tileentity.TileEntityAlienPowerSource;
+
 import cpw.mods.fml.client.FMLClientHandler;
 
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.MathHelper;
+import net.minecraft.world.World;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
+import net.minecraftforge.common.ForgeDirection;
 
 public class ModelAlienPowerSource {
     
