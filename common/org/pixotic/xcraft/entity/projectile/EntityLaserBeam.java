@@ -10,10 +10,7 @@ public class EntityLaserBeam extends EntityThrowable {
     
     public EntityLaserBeam(World world) {
         super(world);
-        int speed = 5;
-        this.motionX*=speed;
-        this.motionY*=speed;
-        this.motionZ*=speed;
+        setThrowableHeading(this.motionX, this.motionY, this.motionZ, 3.0f, 1.0f);
     }
     public EntityLaserBeam(World world, EntityLiving entity) {
         super(world, entity);

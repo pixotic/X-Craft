@@ -2,6 +2,7 @@ package org.pixotic.xcraft;
 
 import org.pixotic.xcraft.block.ModBlocks;
 import org.pixotic.xcraft.core.proxy.CommonProxy;
+import org.pixotic.xcraft.entity.projectile.EntityLaserBeam;
 import org.pixotic.xcraft.item.ModItems;
 import org.pixotic.xcraft.lib.Reference;
 import org.pixotic.xcraft.tileentity.TileEntityAlienPowerSource;
@@ -18,6 +19,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod( modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
@@ -42,6 +44,7 @@ public class XCraft {
         GameRegistry.registerTileEntity(TileEntityAlienPowerSource.class, "tileAlienPowerSource");
         GameRegistry.registerWorldGenerator(new UfoHandler());
         Proxy.InitRendering();
+        EntityRegistry.registerModEntity(EntityLaserBeam.class, "laserBeam", 1, Instance, 160, 1, false);
     }
 
     @PostInit
