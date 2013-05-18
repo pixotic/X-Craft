@@ -24,7 +24,7 @@ public class ClientProxy extends CommonProxy
     public void InitRendering()
     {
         EntityRegistry.registerGlobalEntityID(EntityLaserBeam.class, "laserBeam", EntityRegistry.findGlobalUniqueEntityId());
-        RenderingRegistry.registerEntityRenderingHandler(EntityLaserBeam.class,  new RenderLaserBeam());
+        RenderingRegistry.registerEntityRenderingHandler(EntityLaserBeam.class, new RenderLaserBeam());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAlienPowerSource.class, new TileEntityAlienPowerSourceRenderer());
         MinecraftForgeClient.registerItemRenderer(2223, new ItemAlienPowerSourceRenderer());
     }
