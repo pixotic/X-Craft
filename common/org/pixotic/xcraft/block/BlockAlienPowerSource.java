@@ -49,11 +49,11 @@ public class BlockAlienPowerSource extends BlockContainer {
         if ((playerEntity.ridingEntity == null) && (playerEntity.riddenByEntity == null) && ((playerEntity instanceof EntityPlayerMP))) {
             EntityPlayerMP thePlayer = (EntityPlayerMP)playerEntity;
             if (thePlayer.dimension != XCraft.XCraftDimID) {
-                thePlayer.timeUntilPortal = 10;
+                //thePlayer.timeUntilPortal = 10;
                 thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, XCraft.XCraftDimID, new XCraftTeleporter(thePlayer.mcServer.worldServerForDimension(XCraft.XCraftDimID)));
             }
             else {
-                thePlayer.timeUntilPortal = 10;
+                //thePlayer.timeUntilPortal = 10;
                 thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new XCraftTeleporter(thePlayer.mcServer.worldServerForDimension(0)));
             }
         }
